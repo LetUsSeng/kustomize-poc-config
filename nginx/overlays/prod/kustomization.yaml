@@ -4,6 +4,13 @@ resources:
 
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
 namePrefix: prod-
+
 patches:
 - path: replica-count.yaml
+
+images:
+- name: nginx
+  newName: nginx
+  newTag: 1.23.3-alpine

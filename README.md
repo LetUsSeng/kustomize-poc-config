@@ -10,3 +10,8 @@ kubectl apply -k nginx/overlays/dev --wait
 ```bash
 kubectl apply -k nginx/overlays/prod --wait
 ```
+
+## See what you are goind to deploy
+```bash
+kustomize build nginx/overlays/dev
+```
