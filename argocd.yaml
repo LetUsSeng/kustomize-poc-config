@@ -18,20 +18,20 @@ spec:
   source:
     repoURL: https://github.com/LetUsSeng/kustomize-poc-config.git
     targetRevision: HEAD
-    path: nginx
+    path: nginx/overlays/dev
 
-  # Sources field specifies the list of sources for the application
-  sources:
-    - repoURL: https://github.com/LetUsSeng/kustomize-poc-config.git
-      targetRevision: HEAD
-      path: nginx/overlays/dev
+  # # Sources field specifies the list of sources for the application
+  # sources:
+  #   - repoURL: https://github.com/LetUsSeng/kustomize-poc-config.git
+  #     targetRevision: HEAD
+  #     path: nginx/overlays/dev
 
-      # kustomize specific config
-      kustomize:
-        commonLabels:
-          foo: bar
-        commonAnnotations:
-          beep: boop
+  #     # kustomize specific config
+  #     kustomize:
+  #       commonLabels:
+  #         foo: bar
+  #       commonAnnotations:
+  #         beep: boop
 
   # Destination cluster and namespace to deploy the application
   destination:
