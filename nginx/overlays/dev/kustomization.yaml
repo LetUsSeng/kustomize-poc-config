@@ -10,6 +10,7 @@ namePrefix: dev-
 patches:
 - path: replica-count.yaml
 - path: hpa-setting.yaml
+- path: env-values.yaml
 
 images:
 - name: nginx
